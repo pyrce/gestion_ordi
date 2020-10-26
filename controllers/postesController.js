@@ -1,8 +1,6 @@
 var controller={}
 var attribuer=require("../models/attribute");
 var poste=require("../models/poste");
-var Sequelize=require('sequelize');
-const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi');
 
 controller.add= (req,res)=>{
 

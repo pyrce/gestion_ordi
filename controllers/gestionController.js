@@ -2,8 +2,7 @@ var controller={}
 var poste=require("../models/poste");
 var client=require("../models/client");
 var attribuer=require("../models/attribute");
-var Sequelize=require('sequelize')
-const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi');
+
 var bcrypt = require('bcrypt');
 var user=require("../models/user");
 const { DateTime } = require("luxon");

@@ -1,6 +1,4 @@
 var Sequelize = require('sequelize');
-//const sequelize=new Sequelize({dialect:"mysql"});
-
 const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi');
 
 const poste = sequelize.define('poste', {
@@ -14,6 +12,6 @@ const poste = sequelize.define('poste', {
     nom: {
       type: Sequelize.STRING,
     }
- } ,{ sequelize,timestamps: false});
+ } ,{ timestamps: false});
 
  module.exports = poste;

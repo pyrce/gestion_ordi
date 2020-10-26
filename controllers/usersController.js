@@ -1,13 +1,7 @@
 var controller={}
-var Sequelize=require('sequelize');
+
 var client=require("../models/client");
 var user=require("../models/user");
-var sequelize = new Sequelize('mysql://root:@localhost:3306/gestion_ordi', {
-    host: 'localhost',
-    dialect: 'mysql',
-    protocol: 'mysql',
-    sockertPath: '/tmp/mysqld.sock'
-  });
 var bcrypt = require('bcrypt');
 
 

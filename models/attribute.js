@@ -1,12 +1,5 @@
 var Sequelize = require('sequelize');
-//const sequelize=new Sequelize({dialect:"mysql"});
-var opts = {
-    define: {
-        //prevent sequelize from pluralizing table names
-        freezeTableName: true
-    }
-}
-const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi',opts);
+const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi');
 
 const attribute = sequelize.define('attribuer', {
     // attributes
@@ -41,6 +34,6 @@ const attribute = sequelize.define('attribuer', {
       heure:{
           type:Sequelize.TIME
       }
- } ,{ sequelize, timestamps: false});
+ } ,{ tableName:"attribuer",sequelize, timestamps: false});
 
  module.exports =attribute;

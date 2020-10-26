@@ -4,10 +4,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');     
 const app = express();
-
+var Sequelize=require('sequelize')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
+var  database=require("./db.js");
+const sequelize = new Sequelize(database);
 // importing routes
 const livreRoutes = require('./route/router');
 app.use(cookieParser("secret"));

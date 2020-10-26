@@ -1,6 +1,4 @@
 var Sequelize = require('sequelize');
-//const sequelize=new Sequelize({dialect:"mysql"});
-
 const sequelize = new Sequelize('mysql://root:root@localhost:3306/gestion_ordi');
 
 const client = sequelize.define('client', {
@@ -17,6 +15,6 @@ const client = sequelize.define('client', {
     prenom: {
         type: Sequelize.STRING,
       }
- } ,{sequelize, timestamps: false});
+ } ,{timestamps: false});
 
   module.exports =  client;
